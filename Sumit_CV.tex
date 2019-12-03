@@ -1,0 +1,235 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (l) 2012 Arun I B <arunib@smail.iitm.ac.in> http://www.ee.iitm.ac.in/~ee10s026/
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[res,10pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{comment}
+\usepackage{times}
+\usepackage{tocloft}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\usepackage{enumitem} % itemize without bullets
+\usepackage[document]{ragged2e}
+%\usepackage[top=10cm,bottom=2cm,left=2.54cm,right=2.54cm,marginparwidth=1.75cm]{geometry}
+\title{Sumit-CV}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{0.5pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.9}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+%-----------------------------------------------------------
+%Insert IIT Madras Logo 
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+%  & \multirow{4}{*}\\
+%  & \\
+%-----------------------------------------------------------  
+  \textbf{\Large Sumit Kumar } Ph.D. (2016-2019) & \\
+  Eurecom, France  \\
+  \textbf{Email}: sumit.kumar@eurecom.fr \hspace{1em} \textbf{Skype}: sumitstop \hspace{1em}\textbf{Mob}: +33-755183501 \\ \textbf{Google Scholar}: \href{https://scholar.google.fr/citations?user=-qjjN2sAAAAJ\&hl=en}{https://scholar.google.fr/citations?user=-qjjN2sAAAAJ\&hl=en}\textbf{Webpage}:\href{https://sumiteurecom.github.io/}{https://sumiteurecom.github.io/}
+  %\textbf{Web}: https://sumiteurecom.github.io/, \textbf{Linkedin}: https://www.linkedin.com/in/sumitstop/
+\end{tabular*}
+\\
+
+\justify
+\vspace{-2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Eurecom \& Université Pierre-et-Marie-Curie}{Biot, France}{Ph.D. in Wireless Communication}{Jan 2016 - Expected April 2019}
+\begin{itemize}
+	\resitem{\textbf{Ph.D. Thesis:} Architecture for simultaneous multi-standard SDR platform}
+	\resitem{\textbf{Advisor:}  Prof. Florian Kaltenberger}
+	\resitem{\textbf{Abstract:} 
+	Software Defined Radio (SDR) has been a promising concept for many years. 
+%		Finding its use mostly in military applications, it is getting closer every day to consumer devices, for example, NVIDIA ® i500 LTE modem and NVIDIA ® Tegra 4i processor with integrated i500 modem. 
+		Motivated by the requirements of co-existence between heterogeneous wireless standards in 5G, the objective of the thesis is to theorize and build a testbed for a Simultaneous Multi-standard SDR (SMS-SDR) platform capable of successfully decoding information from heterogeneous wireless standards simultaneously. 
+We have developed multiple innovative techniques to cancel co-channel interference for such a capability.
+		 We have validated our ideas through SDR testbed implementation using GNU Radio, Openairinterface and Ettus USRP.}
+	 \end{itemize}
+\item
+	\ressubheading{International Institute of Information Technology}{Hyderabad, India}{MS by Research, Electronics \& Communication Engineering(CGPA: 8.67/10)}{Aug 2010-Jul 2014}
+\begin{itemize}
+	\resitem{\textbf{MS Thesis:} Efficient Spectrum Sensing and Testbed Development for Cognitive Radio Based Wireless
+		Sensor Networks}
+	\resitem{\textbf{Advisor:} Prof. Garimella Rama Murthy}
+	\resitem{\textbf{Abstract:} The goal of the research was the development of efficient spectrum sensing and spectrum monitoring methods for Cognitive Radio based Wireless Sensor Network (CRWSN). We proposed an energy efficient Doubly Cognitive Architecture (DCA) for spectrum sensing with cognitive capability in time as well as in space. This architecture reduces the time required for spectrum sensing, thus improving the lifetime of CRWSN. We also proposed a low complexity spectrum monitoring method to detect the appearance of licensed users in real-time. The outcome of the thesis was an SDR based testbed with the capability of real-time dynamic spectrum access.}
+\end{itemize}
+\item
+	\ressubheading{Gurukula Kangri University}{Haridwar, India}{B. Tech, Electronics \& Communication Engineering (70.1\%)}{Aug 2004-Jul 2008}
+\end{itemize}
+\vspace{-1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Key Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \textbf{Programming Languages}: C, C++, Python 
+	\item \textbf{Scientific Softwares}: MATLAB, GNU Radio, Ettus UHD
+	\item \textbf{Hardware}: Ettus USRP Version 1 \& 2, N210, E100, B210.
+\end{itemize}
+\vspace{-2em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item[] \centering \large \textbf{Patent}
+\item \justifying `A system for Implementation of Doubly Cognitive Wireless Sensor Networks,` Indian Patent Number: 297998, Granted (2011-2031). Inventors: Sumit Kumar, G. Rammurthy.
+\item[] \centering \large \textbf{Conference Papers}
+\item \justifying Sumit Kumar, Florian Kaltenberger, Kloiber Bernhard, Ramirez Alejandro, `A WiFi SIC receiver in
+the presence of LTE-LAA for indoor deployment,` IEEE Wireless Communications and
+Networking Conference, WCNC 2019
+\item \justifying Sumit Kumar, Florian Kaltenberger, Kloiber Bernhard, Ramirez Alejandro, `Robust OFDM diversity
+receiver under co-channel narrowband interference,` in the 14th IEEE International Conference
+on Wireless and Mobile Computing, Networking and Communications, WiMOB 2018, Cyprus.
+\item \justifying Sumit Kumar, Florian Kaltenberger, Kloiber Bernhard, Ramirez Alejandro, `A Robust decoding
+method for OFDM systems under multiple co-channel narrowband interferers,` in the 27th
+European Conference on Networks and Communications, EuCNC 2018, Slovenia. (Nominated for the best paper award).
+\item \justifying Sumit Kumar, Garimella
+Ramamurthy, `Efficient spectrum sensing/monitoring methods and testbed development for cognitive radio
+based WSN,` 2014 Wireless Innovation Forum Conference on Communications Technologies
+and Software Defined Radio (SDR-WInnComm 2014).
+\item[] \centering \large \textbf{Journals}
+\item \justifying Sumit Kumar, Florian Kaltenberger, `SDR implementation of a robust OFDM receiver under multiple co-channel interferences,' Submitted to EURASIP Journal on Wireless Communications and Networking 2018.
+\item \justifying Sumit Kumar,
+Deepti Singhal, Garimella Ramamurthy, `Doubly cognitive architecture based cognitive wireless sensor network,`  International Journal of Wireless Networks and Broadband
+Technologies (IJWNBT) Vol. 1, Issue 2 June 2011.
+\item[] \centering \large \textbf{Software Defined Radio Demonstrations}
+\item \justifying Sumit Kumar, Florian Kaltenberger, `Mitigating multiple narrowband interferers in SDR IEEE 802.11g diversity receiver,` 24th
+Annual Conference on Mobile Computing and Networking, ACM MobiCom 2018, New Delhi, India.
+\item \justifying Sumit Kumar, Florian Kaltenberger, `SDR implementation of narrow-band interference mitigation in wide-band OFDM systems,` 19th IEEE International Workshop on Signal Processing Advances on Signal Processing Advances
+in Wireless Communications, SPAWC 2018, Kalamata, Greece.
+\item[] \centering \large \textbf{Book Chapters}
+\item \justifying Sumit Kumar, Deepti Singhal, and Garimella Ramamurthy, `Cognitive radio based mobile and static wireless sensor networks,` In Intelligent Wireless sensor networks, Publisher: Taylor \&
+Francis LLC, CRC Press, December 2012.
+\item \justifying Sumit Kumar, Garimella Ramamurthy, Naveen Chilamkurti. `Cooperative Mesh Networks,` In Wireless Technologies: 3G and Beyond, Publisher: Springer May 2013
+\begin{comment}
+\item \justifying
+K. Sankhe, C. Pradhan, \underline{\textbf{S. Kumar}}, and G. Ramamurthy, ``Machine Learning Based Cooperative Relay Selection in Virtual MIMO'', \textbf{IEEE WTS'15}, New York, USA, Apr. 2015. \vspace{-8pt}
+\item \justifying
+C. Pradhan, K. Sankhe, \underline{\textbf{S. Kumar}}, and G. Ramamurthy, ``Revamp of eNodeB for 5G Networks: Detracting Spectrum Scarcity'', \textbf{IEEE CCNC'15}, Las Vegas, USA, Jan. 2015. \vspace{-8pt}
+%\item \justifying
+%K. Sankhe, C. Pradhan, S. Kumar, and G. Ramamurthy, ``Cost Effective Restoration of Wireless Connectivity in Disaster-Hit Areas using OpenBTS'', \textbf{IEEE INDICON 2014}. \vspace{-8pt}
+\end{comment}
+\end{itemize}
+
+%\vspace{-12pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Physics Graduation Prize (\$XXX) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Award of Awesomeness (\$XXX) \cftdotfill{\cftdotsep} 2006}\\
+		\multicolumn{2}{c}{My University Entrance Scholarship (\$X XXX) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{My High School Grade 12 Physics Award (\$XXX) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Boy Genius Award (\$XXX) \cftdotfill{\cftdotsep}2003}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+\end{comment}
+\resheading{Major Courses}
+\begin{itemize}
+	\item \textbf{Eurecom}: Radio Engineering, Project Management(with Certification)
+	\item \textbf{IIIT Hyderabad}: Wireless Communication, Adaptive Signal Processing, Artificial Neural Networks, Speech Signal Processing 
+\end{itemize}
+\vspace{-1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\vspace{-10pt}
+%	\item \ressubheading{Eurecom}{Biot, France}{Ph.D. Researcher}{Jan 2016 - Present}
+	\item \ressubheading{Siemens AG Corporate Technology}{Munich, Germany}{Visitor Researcher}{Aug 2016 - March 2017}
+	\item \ressubheading{Signal Processing and Communication Research Center, IIIT-H}{Hyderabad, India}{Research Associate}{Aug 2014 - Nov 2015}
+	\item \ressubheading{IIIT-H}{Hyderabad, India}{Teaching Assistant for Information Theory and Coding}{Aug 2012 - Dec 2012}
+	\item \ressubheading{IIIT-H}{Hyderabad, India}{Teaching Assistant for Wireless Communications}{Jan 2012 - April 2012}	
+	\item \ressubheading{IIIT-H}{Hyderabad, India}{Teaching Assistant for Information Theory and Coding}{Aug 2011 - Dec 2011}	
+%	\item \ressubheading{Signal Processing and Communication Research Center, IIIT-H}{Hyderabad, India}{Graduate Research Assistant}{Aug 2010 - July 2014}
+\end{itemize}  
+\resheading{SDR Implementations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item \textbf{SDR implementation of IEEE 802.11g transceiver} \\
+	In this project, I developed standard compliant IEEE 802.11g transceiver using Openairinterface, Ettus UHD and USRP B210. MCS 0,2,4 were implemented. The receiver was capable of decoding packets from commercial IEEE 802.11g dongles with an accuracy of 90\% while the packets generated by the transmitter were detected by commercial IEEE 802.11g dongles with 100\% accuracy. However, bidirectional communication with commercial dongles was not possible due to the high latency imposed by the USB 3.0 interface.  	
+	\item \textbf{SDR implementation of narrowband interference mitigation in IEEE 802.11g receivers} \\
+	In this work, I developed a real-time single and dual antenna IEEE 802.11g receiver capable of mitigating multiple co-channel narrowband IEEE 802.15.4 interference in the 2.4 GHz band. Log-likelihood ratios of affected OFDM subcarriers were scaled in proportion to the noise variance induced by interferers. The receiver was tested against standard compliant transmitters. A combination of GNU Radio and Openairinterface was used along with Ettus USRP B210.
+	\item \textbf{SDR implementation of soft bit maximal ratio combiner for IEEE 802.11g receivers}\\
+	This project involved the development of a real-time Soft Bit Maximal Ratio Combiner (SBMRC) for multi-antenna IEEE 802.11g receivers. SBMRC receiver combines the log-likelihood ratios instead of complex samples and achieves similar performance as conventional Maximal Ratio Combiner. The receiver was tested against standard compliant transmitters. A combination of GNU Radio and Openairinterface was used along with Ettus USRP 210. 
+	\item \textbf{SDR testbed for cognitive radio based wireless sensor networks}\\
+	In this work, I prepared a testbed for cognitive radio based wireless sensor networks. Major tasks were the development of spectrum sensing methods such as energy detection, cooperative spectrum sensing and spectrum monitoring which were integrated into the testbed. GNU Radio version 3.4.0 and Ettus USRP 1 were used.   
+	\item \textbf{SDR implementation of non-contiguous OFDM}\\
+	This work included the development of non-contiguous OFDM in GNU Radio for transmission in the presence of narrowband co-channel incumbent users. GNU Radio version 3.4.0 and Ettus USRP 1 were used for the implementation.   
+\end{itemize} 
+\vspace{-1em}
+\resheading{Technical Blogs and Screencasts}
+\begin{itemize}
+	\item[] I maintain my screencast and blog on GNU Radio and USRP. Both of them are listed on the official 3rd party tutorial of GNU Radio website(Sumit’s Screencast and Sumit’s Blog) \href{https://wiki.gnuradio.org/index.php/ExternalDocumentation} {https://wiki.gnuradio.org/index.php/ExternalDocumentation}
+	\item \textbf{Blog}: \href{http://sumitgnuradio.blogspot.com/}{http://sumitgnuradio.blogspot.com/}
+	\item \textbf{Screencast}: \href{https://www.youtube.com/user/2011HPS/}{https://www.youtube.com/user/2011HPS/}
+\end{itemize} 
+\vspace{-1em}
+\resheading{References}
+Available upon request
+%\begin{itemize}
+%	\item Prof. Florian Kaltenberger, Assistant Professor, \\Communication System Dept, Eurecom, Biot, France \\florian.kaltenberger@eurecom.fr
+%	\\ \href{http://www.eurecom.fr/en/people/kaltenberger-florian}{http://www.eurecom.fr/en/people/kaltenberger-florian}
+%	\item Prof. Garimella Rama Murthy, Professor,\\ Computer Science Engineering Department, \\Mahindra Ecole Centrale College of Engineering, Hyderabad, India  \\rama.murthy@mechyd.ac.in
+%	\\
+%	 \href{https://www.mahindraecolecentrale.edu.in/faculty/103/Rama-Murthy.html}{https://www.mahindraecolecentrale.edu.in/faculty/103/Rama-Murthy.html}
+%	 \item Dr. Kalyana Gopala, Senior DSP Engineer, \\Sequans Communications, Biot, France \\kgopala@sequans.com, kalyan.krishnan@gmail.com
+%\end{itemize}
+\end{document}
